@@ -63,7 +63,7 @@ export default async function Page() {
   const profile: Profile =
     (profileData as Profile | null) ?? {
       id: user.id,
-      full_name: user.email,
+      full_name: user.email ?? null,
     };
 
   const { data: requestsData } = await supabase
