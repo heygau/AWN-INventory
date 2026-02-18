@@ -38,8 +38,8 @@ export default async function Page() {
   const profile: Profile =
     (profileData as Profile | null) ?? {
       id: user.id,
-      full_name: user.email,
-      email: user.email,
+      full_name: user.email ?? null,
+      email: user.email ?? null,
       manager_id: null,
     };
 

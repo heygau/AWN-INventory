@@ -27,7 +27,7 @@ export default async function Page() {
   const managerProfile = (profileData ??
     ({
       id: user.id,
-      full_name: user.email,
+      full_name: user.email ?? null,
     } as ManagerProfile)) satisfies ManagerProfile;
 
   return <ManagerApprovals manager={managerProfile} />;
